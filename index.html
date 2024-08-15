@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Monitoring Hidroponik Kawasan Agro Kopiko Meranti</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
+
+    <!-- App CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/portal.css" />
+  </head>
+
+  <body class="app">
+    <!-- HTML Navbar -->
+    <header class="app-header fixed-top">
+      <div class="app-header-inner">
+        <div class="container-fluid py-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <div class="app-branding">
+              <a class="app-logo" href="#">
+                <img
+                  class="logo-icon img-fluid"
+                  src="assets/images/logo kopiko.png"
+                  alt="logo"
+                  style="width: 50px; height: 50px"
+                />
+              </a>
+            </div>
+
+            <!-- Title -->
+            <div class="app-title text-center flex-grow-1">
+              <h4 class="mb-0">Monitoring Hidroponik</h4>
+            </div>
+
+            <!-- Timestamp -->
+            <div class="app-timestamp">
+              <span id="currentDateTime" class="text-muted"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="app-content pt-3 p-md-3 p-lg-4">
+      <div class="container-xl">
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-lg-4">
+            <div class="app-card app-card-stat shadow-sm h-100">
+              <div class="app-card-body p-3 p-lg-4">
+                <h4 class="stats-type mb-1">Suhu</h4>
+                <div class="stats-figure"><span id="suhu"></span> °C</div>
+              </div>
+              <!--//app-card-body-->
+              <a class="app-card-link-mask" href="#"></a>
+            </div>
+            <!--//app-card-->
+          </div>
+          <!--//col-->
+
+          <div class="col-12 col-lg-4">
+            <div class="app-card app-card-stat shadow-sm h-100">
+              <div class="app-card-body p-3 p-lg-4">
+                <h4 class="stats-type mb-1">pH</h4>
+                <div class="stats-figure"><span id="ph"></span> pH</div>
+              </div>
+              <!--//app-card-body-->
+              <a class="app-card-link-mask" href="#"></a>
+            </div>
+            <!--//app-card-->
+          </div>
+          <!--//col-->
+          <div class="col-12 col-lg-4">
+            <div class="app-card app-card-stat shadow-sm h-100">
+              <div class="app-card-body p-3 p-lg-4">
+                <h4 class="stats-type mb-1">TDS</h4>
+                <div class="stats-figure"><span id="tds"></span> ppm</div>
+              </div>
+              <!--//app-card-body-->
+              <a class="app-card-link-mask" href="#"></a>
+            </div>
+            <!--//app-card-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-lg-4">
+            <div class="app-card app-card-chart h-100 shadow-sm">
+              <div class="app-card-header p-3 border-0">
+                <h4 class="app-card-title">Grafik Suhu</h4>
+              </div>
+              <!--//app-card-header-->
+              <div class="app-card-body p-4">
+                <div class="chart-container">
+                  <canvas id="chart-line-suhu"></canvas>
+                </div>
+              </div>
+              <!--//app-card-body-->
+            </div>
+            <!--//app-card-->
+          </div>
+          <!--//col-->
+          <div class="col-12 col-lg-4">
+            <div class="app-card app-card-chart h-100 shadow-sm">
+              <div class="app-card-header p-3 border-0">
+                <h4 class="app-card-title">Grafik PH</h4>
+              </div>
+              <!--//app-card-header-->
+              <div class="app-card-body p-4">
+                <div class="chart-container">
+                  <canvas id="chart-line-ph"></canvas>
+                </div>
+              </div>
+              <!--//app-card-body-->
+            </div>
+            <!--//app-card-->
+          </div>
+          <!--//col-->
+          <div class="col-12 col-lg-4">
+            <div class="app-card app-card-chart h-100 shadow-sm">
+              <div class="app-card-header p-3 border-0">
+                <h4 class="app-card-title">Grafik TDS</h4>
+              </div>
+              <!--//app-card-header-->
+              <div class="app-card-body p-4">
+                <div class="chart-container">
+                  <canvas id="chart-line-tds"></canvas>
+                </div>
+              </div>
+              <!--//app-card-body-->
+            </div>
+            <!--//app-card-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <!--//container-fluid-->
+    </div>
+    <!--//app-content-->
+
+    <!-- Charts JS -->
+    <script src="assets/plugins/chart.js/chart.min.js"></script>
+
+    <!-- Firebase Config JS -->
+    <script type="module" src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/timestamp.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="assets/js/index-charts.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
