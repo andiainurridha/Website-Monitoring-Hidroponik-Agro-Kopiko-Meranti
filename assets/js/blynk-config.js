@@ -2,9 +2,9 @@
 const BLYNK_AUTH_TOKEN = "JVijxoKyqc7dkyxiyKc9Hj6RVBCd2K0u"; // Ganti dengan token Blynk Anda
 
 // URL API Blynk
-const suhuUrl = `http://blynk.cloud/external/api/get?token=${BLYNK_AUTH_TOKEN}&V0`; // Suhu pada V0
-const phUrl = `http://blynk.cloud/external/api/get?token=${BLYNK_AUTH_TOKEN}&V1`; // pH pada V1
-const tdsUrl = `http://blynk.cloud/external/api/get?token=${BLYNK_AUTH_TOKEN}&V2`; // TDS pada V2
+const suhuUrl = `https://blynk.cloud/external/api/get?token=${BLYNK_AUTH_TOKEN}&V0`; // Suhu pada V0
+const phUrl = `https://blynk.cloud/external/api/get?token=${BLYNK_AUTH_TOKEN}&V1`; // pH pada V1
+const tdsUrl = `https://blynk.cloud/external/api/get?token=${BLYNK_AUTH_TOKEN}&V2`; // TDS pada V2
 
 // Fungsi untuk mengambil data dari Blynk
 async function fetchBlynkData() {
