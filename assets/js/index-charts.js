@@ -217,7 +217,16 @@ window.addEventListener("load", function () {
 });
 
 function updateChart(chart, label, data) {
+  // Menambahkan label dan data ke grafik
   chart.data.labels.push(label);
   chart.data.datasets[0].data.push(data);
+
+  // Menghapus label dan data jika sudah melebihi batas
+  if (chart.data.labels.length > 10) {
+    chart.data.labels.shift();
+    chart.data.datasets[0].data.shift();
+  }
+
+  // Memperbarui grafik
   chart.update();
 }
